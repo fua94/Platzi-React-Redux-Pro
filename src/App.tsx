@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Col } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import Searcher from './components/Searcher';
@@ -7,9 +7,11 @@ import { getPokemon } from './api';
 import { setPokemons } from './actions';
 import logo from './statics/logo.svg';
 import './App.css';
+import { PokemonState } from './reducers/pokemons';
+import { Pokemon } from './actions/types';
 
 function App() {
-  const pokemons = useSelector((state) => state.pokemons);
+  const pokemons = useSelector<PokemonState, Pokemon[]>((state) => state.pokemons);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -19,6 +21,7 @@ function App() {
     };
 
     fetchPokemons();
+    // eslint-disable-next-line
   }, []);
 
   return (

@@ -1,9 +1,14 @@
+import React from 'react'
 import { StarOutlined } from '@ant-design/icons';
 import { Card } from 'antd';
 import Meta from 'antd/lib/card/Meta';
 import './PokemonList.css';
 
-const PokemonCard = ({ name }) => {
+type Props = {
+  name: string
+}
+
+const PokemonCard = ({ name }: Props) => {
   return (
     <Card
       title={name}
