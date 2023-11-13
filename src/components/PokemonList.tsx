@@ -1,6 +1,12 @@
+import React from 'react'
 import PokemonCard from './PokemonCard';
+import { Pokemon } from '../actions/types';
 
-const PokemonList = ({ pokemons }) => {
+type Props = {
+  pokemons: Pokemon[]
+}
+
+const PokemonList: React.FunctionComponent<Props> = ({ pokemons }) => {
   return (
     <div className='PokemonList'>
       {pokemons.map((pokemon) => {
@@ -11,7 +17,7 @@ const PokemonList = ({ pokemons }) => {
 };
 
 PokemonList.defaultProps = {
-  pokemons: Array(10).fill(''),
+  pokemons: Array(10).fill({name: ''}),
 };
 
 export default PokemonList;
