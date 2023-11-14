@@ -1,4 +1,5 @@
 # Clase 3: Ciclo de vida de Redux
+
 [Redux Data Flow and React Component Life Cycle](https://dev.to/oahehc/redux-data-flow-and-react-component-life-cycle-11n)
 
 # Clase 8: Integrando Redux
@@ -17,3 +18,20 @@ https://redux.js.org/tutorials/essentials/part-1-overview-concepts
 Redux recomienda usar Hooks API.
 [Use the React-Redux Hooks API](https://redux.js.org/style-guide/#use-the-react-redux-hooks-api)
 
+# Clase 11: Middlewares
+
+Es una pieza de código que se ejecuta cuando X recibe un request y ese mismo X da respuesta al request.
+
+Ayuda a los desarrolladores a diseñar aplicaciones con mayor eficiencia. Además, actúa como hilo conductor entre las aplicaciones, los datos y los usuarios.
+
+Los podemos usar para:
+
+- Hacer logs de errores
+- Hacer fetch de data
+- Depurar nuestra aplicación
+- También podemos customizar nuestra data con applyMiddleware
+
+## Links de interés
+- [compose](https://es.redux.js.org/docs/api/compose.html) -> sirve para componer funciones (de un solo argumento, de derecha a izquierda) en este caso los enhacers (hocs para añadir funcionalidades) o middlewares.
+- [sentry](https://sentry.io/for/react/) -> herramienta logger para react
+- [glosario](https://es.redux.js.org/docs/glosario.html)
