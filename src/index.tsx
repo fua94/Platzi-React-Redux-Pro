@@ -9,14 +9,14 @@ import {
   compose,
   legacy_createStore as createStore 
 } from 'redux';
-import { featuring, logger } from './middlewares';
+import { orderByNameDesc } from './middlewares';
 import './index.css';
 
 const rootElement = document.getElementById('root');
 const devToolsExtension = window.__REDUX_DEVTOOLS_EXTENSION__;
 const composedEnhancers: StoreEnhancer = compose(
   devToolsExtension?.(),
-  applyMiddleware(logger, featuring)
+  applyMiddleware(orderByNameDesc)
 );
 
 if(rootElement){
