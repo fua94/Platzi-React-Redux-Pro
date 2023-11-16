@@ -35,3 +35,12 @@ Los podemos usar para:
 - [compose](https://es.redux.js.org/docs/api/compose.html) -> sirve para componer funciones (de un solo argumento, de derecha a izquierda) en este caso los enhacers (hocs para añadir funcionalidades) o middlewares.
 - [sentry](https://sentry.io/for/react/) -> herramienta logger para react
 - [glosario](https://es.redux.js.org/docs/glosario.html)
+
+# Clase 13: Redux Thunk
+
+Es un middleware para Redux que maneja asincronismo dentro de los **actions** haciendo que devuelvan una función que recibe un dispatch, la misma que puede despachar la acción asíncrona.
+
+
+## Links de interés
+- [Thunk middleware for React](https://github.com/reduxjs/redux-thunk)
+- [Writing Logic with Thunks](https://redux.js.org/usage/writing-logic-thunks)
