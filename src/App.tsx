@@ -1,30 +1,41 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Col } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import Searcher from './components/Searcher';
 import PokemonList from './components/PokemonList';
 import { getPokemon } from './api';
-import { getPokemonsWithDetails } from './actions';
+import { setPokemonsWithDetails } from './actions';
 import logo from './statics/logo.svg';
 import './App.css';
+import { PokemonState } from './reducers/pokemons';
+import { Pokemon } from './actions/types';
+import { ThunkDispatch } from 'redux-thunk';
+import { AnyAction } from 'redux';
 
 function App() {
-  const pokemons = useSelector((state) => state.pokemons);
-  const dispatch = useDispatch();
+  const pokemons = useSelector<PokemonState, Pokemon[]>(
+    (state) => state.pokemons,
+  );
+  const dispatch: ThunkDispatch<PokemonState, unknown, AnyAction> =
+    useDispatch();
 
   useEffect(() => {
     const fetchPokemons = async () => {
       const pokemonsRes = await getPokemon();
-      dispatch(getPokemonsWithDetails(pokemonsRes));
+
+      if (pokemonsRes) {
+        dispatch(setPokemonsWithDetails(pokemonsRes));
+      }
     };
 
     fetchPokemons();
+    // eslint-disable-next-line
   }, []);
 
   return (
-    <div className='App'>
+    <div className="App">
       <Col span={4} offset={10}>
-        <img src={logo} alt='Pokedux' />
+        <img src={logo} alt="Pokedux" />
       </Col>
       <Col span={8} offset={8}>
         <Searcher />
