@@ -44,3 +44,5 @@ Es un middleware para Redux que maneja asincronismo dentro de los **actions** ha
 ## Links de interés
 - [Thunk middleware for React](https://github.com/reduxjs/redux-thunk)
 - [Writing Logic with Thunks](https://redux.js.org/usage/writing-logic-thunks)
+- [Redux-Saga - An intuitive Redux side effect manager](https://redux-saga.js.org)
+- [React Redux middlewares: Thunk vs Saga](https://blog.devgenius.io/react-redux-middlewares-thunk-vs-saga-e346a25319b3)
