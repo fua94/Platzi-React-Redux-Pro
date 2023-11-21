@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { PokemonState } from '../reducers/pokemons';
 
-const initialState = {
+const initialState: PokemonState = {
   pokemons: [],
 };
 
@@ -17,15 +18,13 @@ export const dataSlice = createSlice({
       });
 
       if (currentPokemonIndex >= 0) {
-        const isFavorite = state.pokemons[currentPokemonIndex].favorite;
+        const isFavorite = state.pokemons[currentPokemonIndex].isFavorite;
 
-        state.pokemons[currentPokemonIndex].favorite = !isFavorite;
+        state.pokemons[currentPokemonIndex].isFavorite = !isFavorite;
       }
     },
   },
 });
 
 export const { setFavorite, setPokemons } = dataSlice.actions;
-console.log('🚀 ~ file: dataSlice.js ~ line 29 ~ dataSlice', dataSlice);
-
 export default dataSlice.reducer;
