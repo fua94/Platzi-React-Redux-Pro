@@ -1,11 +1,11 @@
 import React from 'react';
 import { Card } from 'antd';
 import Meta from 'antd/lib/card/Meta';
-import './PokemonList.css';
 import { Pokemon } from '../reducers/types';
 import { useDispatch } from 'react-redux';
 import StarButton from './StarButton';
 import { setFavorite } from '../slices/dataSlice';
+import './PokemonList.css';
 
 type Props = {
   pokemon: Pokemon;

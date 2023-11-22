@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export type PokemonSummary = {
+type PokemonSummary = {
   url: string;
 };
 

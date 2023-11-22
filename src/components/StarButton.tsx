@@ -1,6 +1,6 @@
+import React from 'react';
 import { Button } from 'antd';
 import { StarFilled, StarOutlined } from '@ant-design/icons';
-import React from 'react';
 
 type Props = {
   isFavorite: boolean;

@@ -4,13 +4,13 @@ import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import Searcher from './components/Searcher';
 import PokemonList from './components/PokemonList';
 import logo from './statics/logo.svg';
-import './App.css';
 
 import { Pokemon } from './reducers/types';
 import { ThunkDispatch } from 'redux-thunk';
 import { AnyAction } from 'redux';
 import { PokemonState, fetchPokemonsWithDetails } from './slices/dataSlice';
-import { RootState } from '.';
+import './App.css';
+import { RootState } from './redux/Provider';
 
 function App() {
   const pokemons = useSelector<RootState, Pokemon[]>(
