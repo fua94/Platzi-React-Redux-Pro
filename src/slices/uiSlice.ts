@@ -1,6 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
+export type UiState = {
+  loading: boolean;
+};
+
+const initialState: UiState = {
   loading: false,
 };
 
