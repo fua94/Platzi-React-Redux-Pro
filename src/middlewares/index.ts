@@ -1,6 +1,6 @@
 import { Middleware } from 'redux';
 import { orderByParam } from '../utils/strings';
-import { Pokemon } from '../reducers/types';
+import { Pokemon } from '../redux/types';
 
 export const logger: Middleware = (store) => (next) => (action) => {
   console.log(action);

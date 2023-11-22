@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import dataReducer from '../slices/dataSlice';
-import uiReducer from '../slices/uiSlice';
+import dataReducer from './features/data';
+import uiReducer from './features/ui';
 
 const rootReducer = combineReducers({
   data: dataReducer,

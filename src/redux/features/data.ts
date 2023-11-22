@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { getPokemon, getPokemonDetails } from '../api';
-import { setLoading } from './uiSlice';
-import { Pokemon } from '../reducers/types';
+import { getPokemon, getPokemonDetails } from '../../api';
+import { setLoading } from './ui';
+import { Pokemon } from '../types';
 
 export type PokemonState = {
   pokemons: Pokemon[];

@@ -1,6 +1,6 @@
 import React from 'react';
 import PokemonCard from './PokemonCard';
-import { Pokemon } from '../reducers/types';
+import { Pokemon } from '../redux/types';
 
 type Props = {
   pokemons: Pokemon[];

@@ -5,10 +5,10 @@ import Searcher from './components/Searcher';
 import PokemonList from './components/PokemonList';
 import logo from './statics/logo.svg';
 
-import { Pokemon } from './reducers/types';
+import { Pokemon } from './redux/types';
 import { ThunkDispatch } from 'redux-thunk';
 import { AnyAction } from 'redux';
-import { PokemonState, fetchPokemonsWithDetails } from './slices/dataSlice';
+import { PokemonState, fetchPokemonsWithDetails } from './redux/features/data';
 import './App.css';
 import { RootState } from './redux/Provider';
 
