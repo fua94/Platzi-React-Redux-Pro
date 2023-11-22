@@ -40,9 +40,23 @@ Los podemos usar para:
 
 Es un middleware para Redux que maneja asincronismo dentro de los **actions** haciendo que devuelvan una función que recibe un dispatch, la misma que puede despachar la acción asíncrona.
 
-
 ## Links de interés
 - [Thunk middleware for React](https://github.com/reduxjs/redux-thunk)
 - [Writing Logic with Thunks](https://redux.js.org/usage/writing-logic-thunks)
 - [Redux-Saga - An intuitive Redux side effect manager](https://redux-saga.js.org)
 - [React Redux middlewares: Thunk vs Saga](https://blog.devgenius.io/react-redux-middlewares-thunk-vs-saga-e346a25319b3)
+
+# Clase 18: Agregando Inmutabilidad
+
+Añadir *inmutabilidad* nos asegura que el estado sea inmutable, evitando renders innecesarios al asegurar que el estado se mantenga inalterable, solo mediante los *reducers*
+
+## Links de interés
+- [Immutable Docs](https://immutable-js.com/docs/latest@main)
+
+# Clase 20: Redux Toolkit
+
+Redux Toolkit es una libreria que simplifica el uso de *redux* al eliminar boilerplates y dependencias adicionales, haciendo mas sencillo el uso de redux.
+
+## Links de interés
+- [Getting Started with Redux Toolkit](https://redux-toolkit.js.org/introduction/getting-started)
+- [Alternativas a Redux](https://dev.to/asayerio_techblog/is-redux-dead-1d2a)
